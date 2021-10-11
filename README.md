@@ -4,3 +4,8 @@ Mid-Test Data Structure
 2. Raisa Imani Sari
 3. Juan Sebastian Gultom
 
+
+
+The changes :
+1. Raisa : upload the basic calculator with two input.
+2. 
