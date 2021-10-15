@@ -2,6 +2,7 @@
 #include<iostream>
 #include<stdlib.h>
 #include<cmath>
+
 using namespace std;
 
 //Making the new queue
