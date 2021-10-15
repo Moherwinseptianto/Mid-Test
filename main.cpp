@@ -1,38 +1,33 @@
-#include"Calculator.h"
+#include"Queue.h"
 #include<iostream>
+#include<stdlib.h>
 using namespace std;
 
 
 int main() {
-	
-	int ch;
-    Calculator cal;
-
-	while (ch != 0) {
-		cout << "[0] Terminate" << endl;
-		cout << "[1] Calculator" << endl;
-		cout << "[2] History" << endl;
-        cout << "[3] Delete History" << endl;
-
-		cout << "\n ENTER YOUR CHOICE : ";
-		cin >> ch;
-
-		switch (ch) {
-		case 0: return 0;
-		case 1: {
-            cal.get();
-            cout << cal.getResult() << endl << endl;
-            break;
-        }
-		case 2: break;
-        case 3: break;
-		default:
-			cout << "\n\tYOU ENTER THE WRONG NUMBER";
-			cout << "\n\tPLEASE TRY AGAIN\n\n";
-			break;
-		}
-	}
-
-	return 0;
+    Queue q(10);
+    
+	cout << "Push value of 20, 30, and 40 to the queue" << endl;
+    //Push the values to the queue
+    q.numEnqueue(20);
+    q.numEnqueue(30);
+    q.numEnqueue(40);
+    
+    //Print out the front and rear
+    cout << "This is the front of queue" << q.getFront() <<endl;
+    cout << "This is the rear of queue" << q.getRear() << endl;
+    
+    cout << "Pop the queue" << endl;
+    //Pop the queue
+    q.Dequeue();
+    
+    cout << "The front become" << q.getFront() << endl;
+    
+    //Pop all of the queue until underflow
+    cout << "Pop the queue until underflow" << endl;
+    q.Dequeue();
+    q.Dequeue();
+    
+    cout << "The comment is ";
+    q.Dequeue();
 }
-
