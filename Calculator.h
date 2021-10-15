@@ -2,18 +2,16 @@
 #define CALCULATORH
 
 #include<iostream>
+#include<stdlib.h>
+#include<cmath>
 using namespace std;
 
-class Calculator {
-    private :
-        double a, b;
-        char sym, e;
-        double result;
-    public :
-        Calculator();
-        void get();
-        void calculate(double a, double b, char sym);
-        double getResult();
+class Calculator{
+public :
+	double evaluate(string question);					//evaluating the question
+	double applyOP(double val1, double val2, char op);	//calculate the result of two input
+	double tri(double val1, int y);						//calculate the trigonometry
+	int precedence(char op);							//to see the precedence of arithmatic
 };
 
 #endif

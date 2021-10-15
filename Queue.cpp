@@ -1,6 +1,7 @@
 #include"Queue.h"
 #include<iostream>
 #include<stdlib.h>
+#include<cmath>
 
 using namespace std;
 
@@ -49,8 +50,24 @@ void Queue::numEnqueue(double K) {
     return;
 }
 
+//push the char values
+void Queue::charEnqueue(char C) {
+	
+	//check if full
+    if (isFull()) {
+        cout << "\n\tOverflow" << endl;
+        return;
+    }
+    else {
+        this->array[this->rear] = C; //put inside the array
+        this->rear = this->rear + 1; //increase the rear
+    }
+    return;
+}
 
 //Queue is First in First out
+//But for the purpose of the calculator
+//We make the queue to Last in First out
 void Queue::Dequeue(){
 	
 	//check if empty
@@ -61,7 +78,7 @@ void Queue::Dequeue(){
     
     //dequeue with rear-1
     else {
-        this->front = this->front + 1;;
+        this->rear = this->rear - 1;;
     }
     return;
 }
